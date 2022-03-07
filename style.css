@@ -13,6 +13,7 @@ body {
   background: black;
 
   animation: animatedText 3s infinite;
+  text-align: center;
 }
 
 h1 {
@@ -64,8 +65,8 @@ section {
   -webkit-perspective: 2000;
 }
 
-.card img {
-  width: 40%;
+.card p {
+  width: 60%;
   margin: 1rem;
 }
 
