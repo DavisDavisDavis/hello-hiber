@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=VT323&family=Work+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: "Roboto", sans-serif;
+  background: black;
+
+  animation: animatedText 3s infinite;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+.title {
+  background-image: linear-gradient(
+    to right,
+    #ff0000,
+    #d2f700,
+    #d9ff00,
+    #00ffdd
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  background-size: 300%;
+  background-position: -100%;
+
+  animation: animatedText 3s infinite alternate-reverse;
+}
+
+section {
+  width: 100%;
+  max-width: 65rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2rem;
+  justify-items: center;
+  padding: 0rem;
+}
+
+.card {
+  width: 20rem;
+  height: 20rem;
+  background: white;
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.5s;
+
+  -webkit-perspective: 2000;
+}
+
+.card img {
+  width: 40%;
+  margin: 1rem;
+}
+
+.card div a {
+  margin: 1rem 0.5rem;
+  color: black;
+
+  text-align: center;
+}
+
+@keyframes animatedText {
+  to {
+    background-position: 100%;
+  }
+}
+
+.signature {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  color: white;
+}
+
+@media screen and (max-width: 1350px) {
+  section {
+    width: 100%;
+    max-width: 43rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2rem;
+    justify-items: center;
+    padding: 0rem;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  section {
+    width: 100%;
+    max-width: 43rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 2rem;
+    justify-items: center;
+    padding: 0rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 10vw;
+  }
+
+  .signature {
+    font-size: 2.5vw;
+    bottom: 1rem;
+    right: 1rem;
+    color: white;
+  }
+
+  .card {
+    width: 15rem;
+    height: 18rem;
+    background: white;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.5s;
+
+    -webkit-perspective: 2000;
+  }
+}
