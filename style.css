@@ -148,3 +148,12 @@ section {
     -webkit-perspective: 2000;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .signature {
+    right: -4vw;
+    bottom: 3rem;
+    font-size: 1rem;
+    transform: rotate(90deg);
+  }
+}
